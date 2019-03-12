@@ -1,9 +1,9 @@
 figure(1)
 hold off;
 
-t = x_p2.time;
-sv = x_p2.signals.values(:,3);
-rv = p_c_star_p2.signals.values;
+t = x_p4_no_feedback.time;
+sv = x_p4_no_feedback.signals.values(:,3);
+rv = u_star_p4_no_feedback.signals.values(:,1);
 
 a = 1;
 %b = [1/8 1/8 1/8 1/8 1/8 1/8 1/8 1/8];
@@ -22,7 +22,7 @@ set(handles, 'Fontsize' , 20); % Fontsize
 %set(get(gca,'ylabel'),'rotation',0) % % Rotates text on ylabel
 
 set(gcf, 'PaperPositionMode', 'auto');
-print -depsc2 p10p2_1_pitch.eps %Sets the filename for export
+print -depsc2 p10p4_pitch_no_feedback.eps %Sets the filename for export
 %close;
 
 

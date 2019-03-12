@@ -22,7 +22,7 @@ set(handles, 'Fontsize' , 20); % Fontsize
 %set(get(gca,'ylabel'),'rotation',0) % % Rotates text on ylabel
 
 set(gcf, 'PaperPositionMode', 'auto');
-print -depsc2 p10p2_1_pitch.eps %Sets the filename for export
+print -depsc2 p10p2_01_pitch.eps %Sets the filename for export
 %close;
 
 
