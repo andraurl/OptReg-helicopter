@@ -1,9 +1,9 @@
-figure(1)
+figure(2)
 hold off;
 
 t = x_p3.time;
 sv = x_p3.signals.values(:,3);
-rv = pc_star_p3.signals.values;
+rv = x_star_p3.signals.values(:,3);
 
 a = 1;
 %b = [1/8 1/8 1/8 1/8 1/8 1/8 1/8 1/8];
@@ -14,7 +14,7 @@ y = filter(b,a,sv);
                                           %unfiltered data
 plot(t,sv,t,rv,'--', 'LineWidth', 1.2);
 
-legend('Pitch', 'p_c', 'location', 'northeast') % Up rigth corner legends
+legend('Pitch', 'Optimal path', 'location', 'northeast')
 handles(1) = xlabel('$time$ ($s$)'); % xLabel
 handles(2) = ylabel('$angle$ ($rad$)'); %yLabel
 set(handles, 'Interpreter' , 'Latex'); % Making them in latex

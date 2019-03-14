@@ -16,7 +16,7 @@ y = filter(b,a,sv);
                                           %unfiltered data
 plot(t,sv,t2,rv,'--', 'LineWidth', 1.2);
 
-legend('Travel', 'location', 'northeast') % Up rigth corner legends
+legend('Travel', 'Optimal path', 'location', 'northeast') % Up rigth corner legends
 handles(1) = xlabel('$time$ ($s$)'); % xLabel
 handles(2) = ylabel('$angle$ ($rad$)'); %yLabel
 set(handles, 'Interpreter' , 'Latex'); % Making them in latex
@@ -24,6 +24,6 @@ set(handles, 'Fontsize' , 20); % Fontsize
 %set(get(gca,'ylabel'),'rotation',0) % % Rotates text on ylabel
 
 set(gcf, 'PaperPositionMode', 'auto');
-print -depsc2 p10p2_01_travel.eps %Sets the filename for export
+print -depsc2 p10p2_10_travel.eps %Sets the filename for export
 %close;
 

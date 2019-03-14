@@ -1,6 +1,10 @@
 figure(1)
 hold off;
 
+% t = x_p4.time;
+% sv = x_p4.signals.values(:,1);
+% rv = x_star_p4.signals.values(:,1);
+
 t = x_p4_no_feedback.time;
 sv = x_p4_no_feedback.signals.values(:,1);
 rv = x_star_p4_no_feedback.signals.values(:,1);
@@ -14,7 +18,7 @@ y = filter(b,a,sv);
                                           %unfiltered data
 plot(t,sv,t,rv,'--', 'LineWidth', 1.2);
 
-legend('Travel', 'location', 'northeast') % Up rigth corner legends
+legend('Travel', 'Optimal path', 'location', 'northeast') % Up rigth corner legends
 handles(1) = xlabel('$time$ ($s$)'); % xLabel
 handles(2) = ylabel('$angle$ ($rad$)'); %yLabel
 set(handles, 'Interpreter' , 'Latex'); % Making them in latex
